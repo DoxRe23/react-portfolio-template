@@ -6,6 +6,10 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
 
+import fotoLab from '../assets/images/FotoLab.jpg';
+import fotoHimpunan from '../assets/images/FotoHimpunan.jpg';
+import fotoWisuda from '../assets/images/FotoWisuda.jpg';
+
 function Timeline() {
   return (
     <div id="history">
@@ -18,6 +22,13 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faPersonChalkboard} />}
           >
+
+            <img 
+              src={fotoLab} 
+              alt="Algorithm and Programming Lab" 
+              className="experience-image"
+            />
+
             <h3 className="vertical-timeline-element-title">Algorithm and Programming Lab Assistant</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
             <p>
@@ -30,6 +41,13 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBuildingColumns} />}
           >
+
+          <img 
+              src={fotoHimpunan} 
+              alt="Research and Development" 
+              className="experience-image"
+            />
+
             <h3 className="vertical-timeline-element-title">Research and Development Division Staff</h3>
             <h4 className="vertical-timeline-element-subtitle">Himpunan Mahasiswa Teknik Informatika Gunadarma</h4>
             <p>
@@ -42,6 +60,13 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
+
+          <img 
+              src={fotoWisuda} 
+              alt="Informatics Education" 
+              className="experience-image"
+            />
+
             <h3 className="vertical-timeline-element-title">Informatics Major (3.89 GPA)</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
             <p>
