@@ -31,81 +31,8 @@
     color: white;
 }
 
-/* ===== ADD THESE NEW STYLES FOR THE EXPERIENCE IMAGES ===== */
-
-// Experience image styling
-.experience-image {
-  position: absolute;
-  transform: translateY(-50%);
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border: 3px solid #5000ca;
-  opacity: 0.9;
-  transition: all 0.3s ease;
-  z-index: 3;
-  
-  &:hover {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.05);
-  }
-}
-
-// Specific positioning for each timeline element
-.vertical-timeline-element:nth-child(odd) .experience-image {
-  left: calc(100% + 40px);
-}
-
-.vertical-timeline-element:nth-child(even) .experience-image {
-  right: calc(100% + 40px);
-}
-
-.vertical-timeline-element:nth-child(1) .experience-image {
-  top: 45%;
-}
-
-.vertical-timeline-element:nth-child(2) .experience-image {
-  top: 50%;
-}
-
-.vertical-timeline-element:nth-child(3) .experience-image {
-  top: 55%;
-}
-
-// For even timeline elements (right side), position images on the left to avoid overlap
-.vertical-timeline-element:nth-child(even) .experience-image {
-  right: auto;
-  left: -180px;
-}
-
 @media screen and (max-width: 1170px) {
     .vertical-timeline-element .vertical-timeline-element-date {
         color: rgb(39, 40, 34);
-    }
-    
-    // Adjust images for medium screens
-    .experience-image {        
-        width: 120px;
-        height: 120px;
-    }
-    
-    .vertical-timeline-element:nth-child(odd) .experience-image {
-        left: calc(100% + 30px);
-    }
-    
-    .vertical-timeline-element:nth-child(even) .experience-image {
-        right: calc(100% + 30px);
-    }
-}
-
-
-@media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
-    }
-    .experience-image {
-        display: none;
     }
 }
