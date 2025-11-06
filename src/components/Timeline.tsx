@@ -62,6 +62,18 @@ function Timeline() {
               Automation, Data Governance, Statistical Analysis
             </p>
           </VerticalTimelineElement>
+                    <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="2019 - 2023"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Informatics Major</h3>
+            <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
+            <p>
+              Gained expertise in programming, software and web engineering principles. Applied knowledge in academic projects involving AR based brochure, online system management and sentiment analysis using machine learning.
+            </p>
+          </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
     </div>
