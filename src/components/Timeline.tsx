@@ -21,7 +21,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Algorithm and Programming Lab Assistant</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
             <p>
-              Assisted in the teaching process of the algorithm and programming lab course by making materials and tutorial video, instructing, and conducting assessments of students' capability through assignments and tests.
+              Assisted in the teaching process of the algorithm and programming lab course by making materials and tutorial videos, instructing, and conducting assessments of students' capability through assignments and tests.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
