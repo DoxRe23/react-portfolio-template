@@ -1,33 +1,30 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faPython, faAndroid } from '@fortawesome/free-brands-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
 const labelsFirst = [
     "React",
+    "Node",
     "TypeScript",
     "JavaScript",
+    "Bootstrap",
     "HTML5",
     "CSS",
     "Python",
     "Java",
+    "PHP",
     "SQL",
-    "Bootstrap",
-    "Postman"
 ];
 
 const labelsSecond = [
-    "Git",
-    "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+    "Android Studio",
+    "Visual Studio",
+    "Unity",
+    "Vuforia",
+    "Blender",
 ];
 
 const labelsThird = [
@@ -46,7 +43,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faReact} size="3x"/>
                     <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <p>I have built a diverse array of web applications from scratch using modern technology such as React and Node. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsFirst.map((label, index) => (
@@ -56,9 +53,9 @@ function Expertise() {
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
+                    <FontAwesomeIcon icon={faAndroid} size="3x"/>
+                    <h3>Android Development</h3>
+                    <p>Engage users and drive mobile strategy by leveraging modern Android technologies. I have experience building Android applications focused on performance and good user experience..</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsSecond.map((label, index) => (
