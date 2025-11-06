@@ -36,8 +36,6 @@
 // Experience image styling
 .experience-image {
   position: absolute;
-  right: -180px; // Position to the right of the timeline element
-  top: 50%;
   transform: translateY(-50%);
   width: 150px;
   height: 150px;
@@ -56,8 +54,16 @@
 }
 
 // Specific positioning for each timeline element
+.vertical-timeline-element:nth-child(odd) .experience-image {
+  left: calc(100% + 40px);
+}
+
+.vertical-timeline-element:nth-child(even) .experience-image {
+  right: calc(100% + 40px);
+}
+
 .vertical-timeline-element:nth-child(1) .experience-image {
-  top: 40%;
+  top: 45%;
 }
 
 .vertical-timeline-element:nth-child(2) .experience-image {
@@ -65,7 +71,7 @@
 }
 
 .vertical-timeline-element:nth-child(3) .experience-image {
-  top: 60%;
+  top: 55%;
 }
 
 // For even timeline elements (right side), position images on the left to avoid overlap
@@ -80,17 +86,20 @@
     }
     
     // Adjust images for medium screens
-    .experience-image {
-        right: -140px;
+    .experience-image {        
         width: 120px;
         height: 120px;
     }
     
+    .vertical-timeline-element:nth-child(odd) .experience-image {
+        left: calc(100% + 30px);
+    }
+    
     .vertical-timeline-element:nth-child(even) .experience-image {
-        right: auto;
-        left: -140px;
+        right: calc(100% + 30px);
     }
 }
+
 
 @media screen and (max-width: 1170px) {
     .vertical-timeline-element .vertical-timeline-element-date {
