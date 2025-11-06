@@ -23,6 +23,19 @@
   }
 }
 
+.contact-form input,
+.contact-form textarea {
+  color: #000000 !important;
+}
+
+.contact-form .MuiInputBase-input {
+  color: #000000 !important;
+}
+
+.contact-form .MuiOutlinedInput-input {
+  color: #000000 !important;
+}
+
 label {
   font-size: 1.2rem;
   font-family: 'DomaineDispNar-Medium', sans-serif;
