@@ -10,12 +10,11 @@ const labelsFirst = [
     "TypeScript",
     "JavaScript",
     "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
+    "CSS",
     "Python",
+    "Java",
     "SQL",
-    "PostgreSQL",
+    "Bootstrap",
     "Postman"
 ];
 
@@ -32,13 +31,10 @@ const labelsSecond = [
 ];
 
 const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+    "Python",
+    "PyTorch",
+    "TensorFlow",
+    "NLK",
 ];
 
 function Expertise() {
@@ -73,8 +69,8 @@ function Expertise() {
 
                 <div className="skill">
                     <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
+                    <h3>Machine & Deep Learning</h3>
+                    <p>Stay ahead of the curve by integrating robust, data-driven intelligence into your products. I have experience building machine and deep learning models to power predictive analytics and automate complex processes.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsThird.map((label, index) => (
