@@ -15,12 +15,16 @@
 
   button:hover {
     background-color: #5000ca;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     }
 
   fieldset {
     background-color: white;
     }
+
+  input, textarea{
+    color: #000000;
+  }  
   }
 
 label {
