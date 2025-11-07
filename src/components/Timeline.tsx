@@ -15,7 +15,7 @@ function Timeline() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2021 - 2022"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faPersonChalkboard} />}
           >
             <h3 className="vertical-timeline-element-title">Algorithm and Programming Lab Assistant</h3>
@@ -27,7 +27,7 @@ function Timeline() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2020 - 2022"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBuildingColumns} />}
           >
             <h3 className="vertical-timeline-element-title">Research and Development Division Staff</h3>
@@ -39,10 +39,10 @@ function Timeline() {
                     <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2019 - 2023"
-            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
-            <h3 className="vertical-timeline-element-title">Informatics Major (3.89 GPA)</h3>
+            <h3 className="vertical-timeline-element-title">Informatics Major • 3.89 GPA</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
             <p>
               Gained expertise in programming, software and web engineering principles. Applied knowledge in academic projects involving AR based brochure, online system management and sentiment analysis using machine learning.
