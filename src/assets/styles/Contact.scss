@@ -6,10 +6,10 @@
 
 .contact-form {
   padding-top: 20px;
-
+  
   button {
     float: right;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: #000000;
     }
 
@@ -18,19 +18,32 @@
     color: rgb(255, 255, 255);
     }
 
-  fieldset {
-    background-color: white;
+  .MuiTextField-root {
+    background-color: rgb(255, 255, 255);
+    
+    .MuiOutlinedInput-root {
+      background-color: rgb(255, 255, 255);
+      
+      fieldset {
+        border-color: rgba(0, 0, 0, 0.23);
+      }
+      
+      &:hover fieldset {
+        border-color: rgba(0, 0, 0, 0.87);
+      }
+      
+      &.Mui-focused fieldset {
+        border-color: #5000ca;
+      }
     }
-
-  input, textarea{
-    color: #000000;
-  }  
+  }
   }
 
 label {
   font-size: 1.2rem;
   font-family: 'DomaineDispNar-Medium', sans-serif;
 }
+
 
 .form-flex {
   display: flex;
