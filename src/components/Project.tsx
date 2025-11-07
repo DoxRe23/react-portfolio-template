@@ -11,8 +11,8 @@ function Project() {
         <div className="projects-grid">
             <div className="project">
                 <a href="https://github.com/DoxRe23/model-analisis-sentimen-mysf.git" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/DoxRe23/model-analisis-sentimen-mysf.git" target="_blank" rel="noreferrer"><h2>Filmate AI</h2></a>
-                <p>an analysis model developed using Python and BERT method to compile the user’s review data of MySF application from Google Playstore and turn them into information containing user sentiments, classified into positive, neutral, and negative categories. </p>
+                <a href="https://github.com/DoxRe23/model-analisis-sentimen-mysf.git" target="_blank" rel="noreferrer"><h2>Sentiment Analysis Model for MySF's Review</h2></a>
+                <p>An analysis model developed using Python and BERT method to compile the user’s review data of MySF application from Google Playstore and turn them into information containing user sentiments, classified into positive, neutral, and negative categories. </p>
             </div>
             <div className="project">
                 <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><img src={mock02} className="zoom" alt="thumbnail" width="100%"/></a>
