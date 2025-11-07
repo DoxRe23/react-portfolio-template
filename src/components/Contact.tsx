@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import TextField from '@mui/material/TextField';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 function Contact() {
 
@@ -15,6 +17,9 @@ function Contact() {
   const [nameError, setNameError] = useState<boolean>(false);
   const [emailError, setEmailError] = useState<boolean>(false);
   const [messageError, setMessageError] = useState<boolean>(false);
+  const [openSnackbar, setOpenSnackbar] = useState<boolean>(false);
+  const [snackbarMessage, setSnackbarMessage] = useState<string>('');
+  const [snackbarSeverity, setSnackbarSeverity] = useState<'success' | 'error'>('success');
 
   const form = useRef();
 
@@ -38,14 +43,20 @@ function Contact() {
       emailjs.send('service_4i2sg15', 'template_qbdhfwq', templateParams, 'gv6hezaU49dbxss2u').then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
+          setSnackbarMessage('Message sent successfully!');
+          setSnackbarSeverity('success');
+          setOpenSnackbar(true);
+          setName('');
+          setEmail('');
+          setMessage('');
         },
         (error) => {
           console.log('FAILED...', error);
+          setSnackbarMessage('Failed to send message. Please try again.');
+          setSnackbarSeverity('error');
+          setOpenSnackbar(true);
         },
       );
-      setName('');
-      setEmail('');
-      setMessage('');
     }
   };
 
@@ -107,6 +118,20 @@ function Contact() {
               Send
             </Button>
           </Box>
+          <Snackbar 
+            open={openSnackbar} 
+            autoHideDuration={6000} 
+            onClose={() => setOpenSnackbar(false)}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+          >
+            <Alert 
+              onClose={() => setOpenSnackbar(false)} 
+              severity={snackbarSeverity}
+              sx={{ width: '100%' }}
+            >
+              {snackbarMessage}
+            </Alert>
+          </Snackbar>
         </div>
       </div>
     </div>
