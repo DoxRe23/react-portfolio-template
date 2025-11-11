@@ -43,7 +43,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faReact} size="3x"/>
                     <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technology such as React and Node. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <p>Stay competitive in the digital market by leveraging modern, scalable web architectures in your projects. I have professional experience building enterprise-grade, full-stack solutions to empower seamless user experiences and drive business efficiency. I have built a diverse array of web applications from scratch using modern technology such as React and Node and also have strong proficiency in the SDLC process and frontend + backend development.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsFirst.map((label, index) => (
