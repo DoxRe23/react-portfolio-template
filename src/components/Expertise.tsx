@@ -43,7 +43,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faReact} size="3x"/>
                     <h3>Full Stack Web Development</h3>
-                    <p>Stay competitive in the digital market by leveraging modern, scalable web architectures in your projects. I have professional experience building enterprise-grade, full-stack solutions to empower seamless user experiences and drive business efficiency. I have built a diverse array of web applications from scratch using modern technology such as React and Node and also have strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <p>Stay competitive in the digital market by leveraging modern, scalable web architectures in your projects. I have experience in building a diverse array of web applications from scratch using modern technology such as React and Node.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsFirst.map((label, index) => (
@@ -55,7 +55,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faAndroid} size="3x"/>
                     <h3>Android Development</h3>
-                    <p>Engage users and drive mobile strategy by leveraging modern Android technologies. I have experience building Android applications focused on performance and good user experience..</p>
+                    <p>Engage users and drive mobile strategy by leveraging modern Android technologies. I have experience building Android applications focused on performance and good user experience.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsSecond.map((label, index) => (

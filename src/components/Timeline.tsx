@@ -14,6 +14,18 @@ function Timeline() {
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            date="2023"
+            iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faGraduationCap} />}
+          >
+            <h3 className="vertical-timeline-element-title">Graduated from Informatics Major • 3.89 GPA</h3>
+            <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
+            <p>
+              Gained expertise in programming, software and web engineering principles. Applied knowledge in academic projects involving AR based brochure, online system management and sentiment analysis using machine learning.
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
             date="2021 - 2022"
             iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faPersonChalkboard} />}
@@ -36,16 +48,16 @@ function Timeline() {
               Contributed to the division's technical initiatives through project planning, data researching and mentoring to support student development
             </p>
           </VerticalTimelineElement>
-                    <VerticalTimelineElement
+          <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2019 - 2023"
+            date="2019"
             iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faGraduationCap} />}
           >
-            <h3 className="vertical-timeline-element-title">Informatics Major • 3.89 GPA</h3>
+            <h3 className="vertical-timeline-element-title">Entered Informatics Major</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
             <p>
-              Gained expertise in programming, software and web engineering principles. Applied knowledge in academic projects involving AR based brochure, online system management and sentiment analysis using machine learning.
+              Entered the Informatics program at Universitas Gunadarma with a strong passion for technology and problem-solving.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
