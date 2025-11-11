@@ -1,7 +1,7 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuildingColumns, faGraduationCap, faPersonChalkboard } from '@fortawesome/free-solid-svg-icons';
+import { faBuildingColumns, faGraduationCap, faPersonChalkboard, faSchool } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
@@ -52,7 +52,7 @@ function Timeline() {
             className="vertical-timeline-element--work"
             date="2019"
             iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faGraduationCap} />}
+            icon={<FontAwesomeIcon icon={faSchool} />}
           >
             <h3 className="vertical-timeline-element-title">Entered Informatics Major</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
