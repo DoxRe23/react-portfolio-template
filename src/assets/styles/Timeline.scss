@@ -36,3 +36,77 @@
         color: rgb(39, 40, 34);
     }
 }
+
+/* Lightbox styles for timeline image popouts */
+.timeline-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 180ms ease-out;
+}
+
+.timeline-lightbox__content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-lightbox__img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    transform: translateY(10px) scale(0.98);
+    animation: popIn 220ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+.timeline-lightbox__close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: #262626;
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+.timeline-lightbox__controls {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-lightbox__controls button {
+    background: rgba(255,255,255,0.9);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.timeline-lightbox__counter {
+    color: white;
+}
+
+@keyframes popIn {
+    to { transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}

@@ -5,8 +5,23 @@ import { faBuildingColumns, faGraduationCap, faPersonChalkboard, faSchool } from
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
+import ImageLightbox from './ImageLightbox';
+import FotoWisuda from '../assets/images/FotoWisuda.jpg';
+import FotoLab from '../assets/images/FotoLab.jpg';
+import FotoHimpunan from '../assets/images/FotoHimpunan.jpg';
+import FotoMaba from '../assets/images/FotoMaba.jpg';
 
 function Timeline() {
+  const [lightboxOpen, setLightboxOpen] = React.useState(false);
+  const [lightboxImages, setLightboxImages] = React.useState<string[]>([]);
+  const [startIndex, setStartIndex] = React.useState(0);
+
+  function openLightbox(images: string[], index = 0) {
+    setLightboxImages(images);
+    setStartIndex(index);
+    setLightboxOpen(true);
+  }
+
   return (
     <div id="history">
       <div className="items-container">
@@ -16,7 +31,7 @@ function Timeline() {
             className="vertical-timeline-element--work"
             date="2023"
             iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faGraduationCap} />}
+            icon={<FontAwesomeIcon icon={faGraduationCap} onClick={() => openLightbox([FotoWisuda], 0)} />}
           >
             <h3 className="vertical-timeline-element-title">Graduated from Informatics Major • 3.89 GPA</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
@@ -28,7 +43,7 @@ function Timeline() {
             className="vertical-timeline-element--work"
             date="2021 - 2022"
             iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faPersonChalkboard} />}
+            icon={<FontAwesomeIcon icon={faPersonChalkboard} onClick={() => openLightbox([FotoLab], 0)} />}
           >
             <h3 className="vertical-timeline-element-title">Algorithm and Programming Lab Assistant</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
@@ -40,7 +55,7 @@ function Timeline() {
             className="vertical-timeline-element--work"
             date="2020 - 2022"
             iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBuildingColumns} />}
+            icon={<FontAwesomeIcon icon={faBuildingColumns} onClick={() => openLightbox([FotoHimpunan], 0)} />}
           >
             <h3 className="vertical-timeline-element-title">Research and Development Division Staff</h3>
             <h4 className="vertical-timeline-element-subtitle">Himpunan Mahasiswa Teknik Informatika Gunadarma</h4>
@@ -52,7 +67,7 @@ function Timeline() {
             className="vertical-timeline-element--work"
             date="2019"
             iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faSchool} />}
+            icon={<FontAwesomeIcon icon={faSchool} onClick={() => openLightbox([FotoMaba], 0)} />}
           >
             <h3 className="vertical-timeline-element-title">Entered Informatics Major</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
@@ -61,6 +76,14 @@ function Timeline() {
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
+
+        {lightboxOpen && (
+          <ImageLightbox
+            images={lightboxImages}
+            startIndex={startIndex}
+            onClose={() => setLightboxOpen(false)}
+          />
+        )}
       </div>
     </div>
   );
