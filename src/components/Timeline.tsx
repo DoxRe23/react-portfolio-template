@@ -30,8 +30,7 @@ function Timeline() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2023"
-            iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faGraduationCap} onClick={() => openLightbox([FotoWisuda], 0)} />}
+            icon={<FontAwesomeIcon icon={faGraduationCap} tabIndex={0} role="button" onClick={() => openLightbox([FotoWisuda], 0)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); openLightbox([FotoWisuda], 0); } }} />}
           >
             <h3 className="vertical-timeline-element-title">Graduated from Informatics Major • 3.89 GPA</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
@@ -39,11 +38,11 @@ function Timeline() {
               Gained expertise in programming, software and web engineering principles. Applied knowledge in academic projects involving AR based brochure, online system management and sentiment analysis using machine learning.
             </p>
           </VerticalTimelineElement>
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2021 - 2022"
-            iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faPersonChalkboard} onClick={() => openLightbox([FotoLab], 0)} />}
+            icon={<FontAwesomeIcon icon={faPersonChalkboard} tabIndex={0} role="button" onClick={() => openLightbox([FotoLab], 0)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); openLightbox([FotoLab], 0); } }} />}
           >
             <h3 className="vertical-timeline-element-title">Algorithm and Programming Lab Assistant</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>
@@ -51,11 +50,11 @@ function Timeline() {
               Assisted in the teaching process of the algorithm and programming lab course by making materials and tutorial videos, instructing, and conducting assessments of students' capability through assignments and tests.
             </p>
           </VerticalTimelineElement>
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2020 - 2022"
-            iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faBuildingColumns} onClick={() => openLightbox([FotoHimpunan], 0)} />}
+            icon={<FontAwesomeIcon icon={faBuildingColumns} tabIndex={0} role="button" onClick={() => openLightbox([FotoHimpunan], 0)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); openLightbox([FotoHimpunan], 0); } }} />}
           >
             <h3 className="vertical-timeline-element-title">Research and Development Division Staff</h3>
             <h4 className="vertical-timeline-element-subtitle">Himpunan Mahasiswa Teknik Informatika Gunadarma</h4>
@@ -63,11 +62,11 @@ function Timeline() {
               Contributed to the division's technical initiatives through project planning, data researching and mentoring to support student development
             </p>
           </VerticalTimelineElement>
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2019"
-            iconStyle={{ background: '#696470ff', color: 'rgb(39, 40, 34)' }}
-            icon={<FontAwesomeIcon icon={faSchool} onClick={() => openLightbox([FotoMaba], 0)} />}
+            icon={<FontAwesomeIcon icon={faSchool} tabIndex={0} role="button" onClick={() => openLightbox([FotoMaba], 0)} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); openLightbox([FotoMaba], 0); } }} />}
           >
             <h3 className="vertical-timeline-element-title">Entered Informatics Major</h3>
             <h4 className="vertical-timeline-element-subtitle">Universitas Gunadarma</h4>

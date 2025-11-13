@@ -31,6 +31,15 @@
     color: white;
 }
 
+/* Default icon background and icon color for timeline circles (use CSS instead of inline styles) */
+.vertical-timeline .vertical-timeline-element-icon {
+    background-color: #696470ff;
+}
+
+.vertical-timeline .vertical-timeline-element-icon .svg-inline--fa {
+    color: rgb(255, 255, 255);
+}
+
 @media screen and (max-width: 1170px) {
     .vertical-timeline-element .vertical-timeline-element-date {
         color: rgb(39, 40, 34);
@@ -109,4 +118,38 @@
 @keyframes fadeIn {
     from { opacity: 0 }
     to { opacity: 1 }
+}
+
+/* Hover/focus styles for timeline icon circles */
+.vertical-timeline .vertical-timeline-element-icon {
+    transition: background-color 160ms ease, transform 160ms ease;
+    cursor: pointer;
+    outline: none;
+}
+
+.vertical-timeline .vertical-timeline-element-icon:hover,
+.vertical-timeline .vertical-timeline-element-icon:focus {
+    background-color: #8470c0; /* change to your preferred hover color */
+    transform: scale(1.08);
+    cursor: pointer; /* show zoom-in when hovering since it opens images */
+}
+
+.vertical-timeline .vertical-timeline-element-icon:hover .svg-inline--fa,
+.vertical-timeline .vertical-timeline-element-icon:focus .svg-inline--fa {
+    color: #ffffff; /* icon color on hover */
+    transform: scale(1.05);
+}
+
+/* Ensure cursor applies to svg children and pseudo element so pointer/zoom appears reliably */
+.vertical-timeline .vertical-timeline-element-icon *,
+.vertical-timeline .vertical-timeline-element-icon::before {
+    cursor: inherit;
+}
+
+/* Slightly increase hit target on small screens */
+@media (max-width: 600px) {
+    .vertical-timeline .vertical-timeline-element-icon {
+        width: 56px;
+        height: 56px;
+    }
 }
