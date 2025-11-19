@@ -5,6 +5,7 @@ import mock03 from '../assets/images/MySF.png';
 import '../assets/styles/Project.scss';
 import { Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import Brosur3D from '../assets/documents/Brosur3D.pdf';
 import pdfBrochure from '../assets/documents/CvOky.pdf';
 
 function Project() {
@@ -39,7 +40,7 @@ function Project() {
                 <p>A web-based goods delivery management system made with PHP, MySQL and BootStrap designed to streamline the shipping management process for TLJ Cargo.</p>
             </div>
             <div className="project">
-                <img src={mock01} className="zoom" alt="3D Brochures thumbnail" width="100%" style={{cursor: 'pointer'}} onClick={() => openPdf(pdfBrochure, "3D Brochures for Kitchen Product (PDF)")} />
+                <img src={mock01} className="zoom" alt="3D Brochures thumbnail" width="100%" style={{cursor: 'pointer'}} onClick={() => openPdf(Brosur3D, "3D Brochures for Kitchen Product (PDF)")} />
                 <a href="https://github.com/DoxRe23/brosur-3d" target="_blank" rel="noreferrer"><h2>3D Brochures for Kitchen Product</h2></a>
                 <p>An android application made with Android Studio, Vuforia and Unity, developed to assist in the marketing of kitchenware products. It provides information on the marketed kitchenware products utilizing Alternate  Reality and 3D technology, along with their specifications and prices.</p>
             </div>
