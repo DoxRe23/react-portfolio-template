@@ -6,6 +6,7 @@ import '../assets/styles/Project.scss';
 import { Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Brosur3D from '../assets/documents/Brosur3D.pdf';
+import BrosurTLJ from '../assets/documents/BrosurTLJ.pdf';
 import pdfBrochure from '../assets/documents/CvOky.pdf';
 
 function Project() {
@@ -35,7 +36,7 @@ function Project() {
                 <p>An analysis model developed using Python and BERT method to compile the user’s review data of MySF application from Google Playstore and turn them into information containing user sentiments, classified into positive, neutral, and negative categories. </p>
             </div>
             <div className="project">
-                <img src={mock02} className="zoom" alt="TLJ Cargo thumbnail" width="100%" style={{cursor: 'pointer'}} onClick={() => openPdf(pdfBrochure, "TLJ Cargo Management System (PDF)")} />
+                <img src={mock02} className="zoom" alt="TLJ Cargo thumbnail" width="100%" style={{cursor: 'pointer'}} onClick={() => openPdf(BrosurTLJ, "TLJ Cargo Management System (PDF)")} />
                 <a href="https://github.com/DoxRe23/tlj-cargo-management-system" target="_blank" rel="noreferrer"><h2>TLJ Cargo Management System</h2></a>
                 <p>A web-based goods delivery management system made with PHP, MySQL and BootStrap designed to streamline the shipping management process for TLJ Cargo.</p>
             </div>
