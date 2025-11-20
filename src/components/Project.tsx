@@ -7,7 +7,7 @@ import { Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import Brosur3D from '../assets/documents/Brosur3D.pdf';
 import BrosurTLJ from '../assets/documents/BrosurTLJ.pdf';
-import pdfBrochure from '../assets/documents/CvOky.pdf';
+import BrosurSentimen from '../assets/documents/BrosurSentimen.pdf';
 
 function Project() {
     const [open, setOpen] = useState(false);
@@ -31,7 +31,7 @@ function Project() {
         <h1>Personal Projects</h1>
         <div className="projects-grid">
             <div className="project">
-                <img src={mock03} className="zoom" alt="Sentiment Analysis thumbnail" width="100%" style={{cursor: 'pointer'}} onClick={() => openPdf(pdfBrochure, "Sentiment Analysis Model for MySF's Review (PDF)")} />
+                <img src={mock03} className="zoom" alt="Sentiment Analysis thumbnail" width="100%" style={{cursor: 'pointer'}} onClick={() => openPdf(BrosurSentimen, "Sentiment Analysis Model for MySF's Review (PDF)")} />
                 <a href="https://github.com/DoxRe23/model-analisis-sentimen-mysf" target="_blank" rel="noreferrer"><h2>Sentiment Analysis Model for MySF's Review</h2></a>
                 <p>An analysis model developed using Python and BERT method to compile the user’s review data of MySF application from Google Playstore and turn them into information containing user sentiments, classified into positive, neutral, and negative categories. </p>
             </div>
