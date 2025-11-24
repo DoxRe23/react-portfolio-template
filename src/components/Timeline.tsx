@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuildingColumns, faGraduationCap, faPersonChalkboard, faSchool } from '@fortawesome/free-solid-svg-icons';
@@ -12,10 +12,33 @@ import FotoMaba from '../assets/images/FotoMaba.jpg';
 import { Box } from '@mui/material';
 
 function Timeline() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImg, setModalImg] = useState<string | null>(null);
+
+  // Only open modal for desktop
+  const handleImgClick = (imgSrc: string) => {
+    if (window.matchMedia("(min-width: 900px)").matches) {
+      setModalImg(imgSrc);
+      setModalOpen(true);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setModalImg(null);
+  };
   // Images are shown inline beside/under the text depending on screen width.
 
   return (
     <div id="history">
+      {/* Modal for full image */}
+      {modalOpen && (
+        <div className="timeline-modal" onClick={handleCloseModal} style={{
+          position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.7)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer'
+        }}>
+          <img src={modalImg!} alt="Full" style={{ maxWidth: '90vw', maxHeight: '90vh', borderRadius: 8, boxShadow: '0 2px 16px rgba(0,0,0,0.5)' }} />
+        </div>
+      )}
       <div className="items-container">
         <h1>History</h1>
         <VerticalTimeline>
@@ -30,7 +53,8 @@ function Timeline() {
                   src={FotoWisuda}
                   alt="Graduation"
                   className="timeline-img"
-                  sx={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 1, display: 'block' }}
+                  sx={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 1, display: 'block', cursor: { md: 'pointer', xs: 'default' } }}
+                  onClick={() => handleImgClick(FotoWisuda)}
                 />
               </Box>
               <Box sx={{ flex: { xs: 'none', md: 1 }, display: 'flex', flexDirection: 'column', width: { xs: '100%', md: '66.666%' } }}>
@@ -57,7 +81,8 @@ function Timeline() {
                   src={FotoLab}
                   alt="Lab Assistant"
                   className="timeline-img"
-                  sx={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 1, display: 'block' }}
+                  sx={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 1, display: 'block', cursor: { md: 'pointer', xs: 'default' } }}
+                  onClick={() => handleImgClick(FotoLab)}
                 />
               </Box>
               <Box sx={{ flex: { xs: 'none', md: 1 }, display: 'flex', flexDirection: 'column', width: { xs: '100%', md: '66.666%' } }}>
@@ -84,7 +109,8 @@ function Timeline() {
                   src={FotoHimpunan}
                   alt="Himpunan"
                   className="timeline-img"
-                  sx={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 1, display: 'block' }}
+                  sx={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 1, display: 'block', cursor: { md: 'pointer', xs: 'default' } }}
+                  onClick={() => handleImgClick(FotoHimpunan)}
                 />
               </Box>
               <Box sx={{ flex: { xs: 'none', md: 1 }, display: 'flex', flexDirection: 'column', width: { xs: '100%', md: '66.666%' } }}>
@@ -111,7 +137,8 @@ function Timeline() {
                   src={FotoMaba}
                   alt="Entrance"
                   className="timeline-img"
-                  sx={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 1, display: 'block' }}
+                  sx={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 1, display: 'block', cursor: { md: 'pointer', xs: 'default' } }}
+                  onClick={() => handleImgClick(FotoMaba)}
                 />
               </Box>
               <Box sx={{ flex: { xs: 'none', md: 1 }, display: 'flex', flexDirection: 'column', width: { xs: '100%', md: '66.666%' } }}>

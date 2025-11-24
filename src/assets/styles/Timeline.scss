@@ -47,11 +47,20 @@
 
 /* Image styling used inside timeline elements */
 .timeline-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 900px) {
+    .timeline-img:hover {
+        transform: scale(1.08);
+        z-index: 2;
+        box-shadow: 0 12px 32px rgba(0,0,0,0.22);
+    }
 }
 
 .timeline-text {
