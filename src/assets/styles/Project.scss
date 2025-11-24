@@ -47,3 +47,23 @@
         }
     }
 }
+
+/* Hide scrollbars inside the modal/dialog and the iframe container */
+.MuiDialog-paper {
+    overflow: hidden !important;
+}
+.MuiDialog-container {
+    overflow: hidden !important;
+}
+.project-pdf-iframe {
+    display: block;
+    overflow: hidden;
+    /* hide scrollbars for WebKit */
+}
+.project-pdf-iframe::-webkit-scrollbar {
+    display: none;
+}
+/* Firefox */
+.project-pdf-iframe {
+    scrollbar-width: none;
+}
