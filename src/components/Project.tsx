@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import mock01 from '../assets/images/Brosur3D.png';
 import mock02 from '../assets/images/TLJCargo.png';
 import mock03 from '../assets/images/MySF.png';
@@ -26,6 +26,18 @@ function Project() {
         setDialogTitle('');
     }
 
+    useEffect(() => {
+        // Lock background scrolling while dialog is open
+        if (open) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        // cleanup on unmount
+        return () => { document.body.style.overflow = ''; };
+    }, [open]);
+
     return(
     <div className="projects-container" id="projects">
         <h1>Personal Projects</h1>
@@ -48,7 +60,7 @@ function Project() {
 
         </div>
 
-        <Dialog open={open} onClose={handleClose} fullWidth maxWidth="md">
+        <Dialog open={open} onClose={handleClose} fullWidth maxWidth="md" PaperProps={{ style: { overflow: 'hidden' } }}>
             <DialogTitle>
                 {dialogTitle}
                 <IconButton
@@ -59,8 +71,8 @@ function Project() {
                     <CloseIcon />
                 </IconButton>
             </DialogTitle>
-            <DialogContent dividers>
-                <iframe src={currentPdf} title={dialogTitle} width="100%" height="600px" style={{border:0}} />
+            <DialogContent dividers style={{ overflow: 'hidden', padding: 0 }}>
+                <iframe src={currentPdf} title={dialogTitle} width="100%" height="600px" style={{ border: 0, overflow: 'hidden' }} scrolling="no" />
             </DialogContent>
         </Dialog>
 
